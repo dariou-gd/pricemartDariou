@@ -59,6 +59,14 @@ registerClientsController.registerClient = async (req, res) => {
           maxAge: 15 * 60 * 1000, // 15 minutes
         });
 
+        const transporter = nodemailer.createTransport({
+          service: "gmail",
+          auth: {
+            user: ,
+            pass: 
+          }
+        });
+
   } catch (error) {
     console.error("Error registering client:", error);
     res.status(500).json({ message: "Error registering client" });
