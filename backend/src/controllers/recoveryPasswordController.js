@@ -111,7 +111,7 @@ recoveryPasswordController.verifyCode = async (req, res) => {
 recoveryPasswordController.newPassword = async (req, res) => {
     try {
         //Solicito los datos
-        const { newPassword, confirmNewPassword } = req.body;
+        const { newPassword, confirmNewPassword } = req.body; 
 
         if (newPassword !== confirmNewPassword) {
             return res.status(400).json({ message: "passwords doesnt match" })
