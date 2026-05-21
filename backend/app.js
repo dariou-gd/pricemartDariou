@@ -18,6 +18,7 @@ import limiter from "./src/middlewares/rateLimiter.js";
 
 import cookieParser from "cookie-parser"
 import cors from "cors";
+import providerRoutes from "./src/routes/providers.js"
 
 
 
@@ -48,6 +49,7 @@ app.use("/api/registerEmployee", registerEmployeeRoutes);
 app.use("/api/loginClients", loginCustomerRoutes);
 app.use("/api/logout", logoutRoutes);
 app.use("/api/recoveryPassword", recoveryPasswordRoutes);
+app.use("/api/providers", providerRoutes);
 
 
 
