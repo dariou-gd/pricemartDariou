@@ -6,6 +6,7 @@ import reviewsRoutes from "./src/routes/reviewsRoutes.js"
 import brandsRoutes from "./src/routes/brands.js"
 import adminsRoutes from "./src/routes/admins.js"
 import clientsRoutes from "./src/routes/clients.js"
+import cartRoutes from "./src/routes/cart.js"
 
 import loginCustomerRoutes from "./src/routes/loginCustomer.js"
 import logoutRoutes from "./src/routes/logout.js"
@@ -50,8 +51,6 @@ app.use("/api/loginClients", loginCustomerRoutes);
 app.use("/api/logout", logoutRoutes);
 app.use("/api/recoveryPassword", recoveryPasswordRoutes);
 app.use("/api/providers", providerRoutes);
-
-
-
+app.use("/api/cart", cartRoutes)
 
 export default app;
