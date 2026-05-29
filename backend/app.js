@@ -21,7 +21,7 @@ import cookieParser from "cookie-parser"
 import cors from "cors";
 import providerRoutes from "./src/routes/providers.js"
 
-
+import wompiRoutes from "./src/routes/wompi.js"
 
 const app = express();
 
@@ -52,5 +52,6 @@ app.use("/api/logout", logoutRoutes);
 app.use("/api/recoveryPassword", recoveryPasswordRoutes);
 app.use("/api/providers", providerRoutes);
 app.use("/api/cart", cartRoutes)
+app.use("api/wompi", wompiRoutes);
 
 export default app;
